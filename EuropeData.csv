@@ -42,7 +42,7 @@ zoom,name,abbreviation,ISO alpha 2,ISO alpha 3,ISO numeric,land area km,populati
 4,Malta,Malta,MT,MLT,470,316,403000,35.92,14.43,eu
 4,Liechtenstein,Liech.,LI,LIE,438,160,35000,47.17,9.53,eu
 4,Guernsey,Guern.,GG,GGY,831,78,65228,49.58,-2.33,eu
-4,San Marino,S. Mar.,SM,SMR,674,61.2,31477,43.93,12.42,eu
-4,Gibraltar,Gib.,GI,GIB,292,6.5,27884,36.13,-5.35,eu
+4,San Marino,S. Mar.,SM,SMR,674,61,31477,43.93,12.42,eu
+4,Gibraltar,Gib.,GI,GIB,292,7,27884,36.13,-5.35,eu
 4,Monaco,Monaco,MC,MCO,492,2,32965,43.73,7.42,eu
-4,Vatican City,Vatican City,VA,VAT,336,0.4,921,41.90,12.45,eu
+4,Vatican City,Vatican City,VA,VAT,336,1,921,41.90,12.45,eu

@@ -29,7 +29,7 @@ public class Country {
         return area;
     }
 
-    public int getLatitude() {
+    public double getLatitude() {
         return latitude;
     }
 
