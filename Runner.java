@@ -28,17 +28,24 @@ public class Runner {
                 pops.add(con.getPopulation());
             }
             int[] ordPops = new int[pops.size()];
+            
             int totalCountries = pops.size();
             while (pops.size() > 0) {
                 int least = pops.get(0);
-                for (Integer pop : pops) {
-                    least = Math.min(least, pop);
+                int index = 0;
+                for (int i = 0; pops.size();i++) {
+                    if (pops.get(i) < least) {
+                        least = pops.get(i);
+                        index = i;
+                    }
                 }
                 ordPops[totalCountries - pops.size()] = least;
             }
-            
 
+            System.out.println(ordPops.length);
+            
             for (int pop: ordPops) {
+                
                 System.out.println(pop);
             }
             /*if (pops.size() % 2 == 1) {
