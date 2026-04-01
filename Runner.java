@@ -17,12 +17,16 @@ public class Runner {
 
             System.out.println("Data regarding the population of countries in Europe:");
             
+            //mean
             int total = 0;
             for (int i = 0; i < countries.size(); i++) {
                 total += countries.get(i).getPopulation();
             }
-            System.out.println("Mean population: " + (total/countries.size()));
 
+            double mean = total/countries.size();
+            System.out.println("Mean population: " + mean);
+
+            //Median
             ArrayList<Integer> pops = new ArrayList<Integer>();
             for (Country con : countries) {
                 pops.add(con.getPopulation());
@@ -33,26 +37,35 @@ public class Runner {
             while (pops.size() > 0) {
                 int least = pops.get(0);
                 int index = 0;
-                for (int i = 0; pops.size();i++) {
+                for (int i = 0; i < pops.size();i++) {
                     if (pops.get(i) < least) {
                         least = pops.get(i);
                         index = i;
                     }
                 }
                 ordPops[totalCountries - pops.size()] = least;
+                pops.remove(index);
+            }
+            
+            if (pops.size() % 2 == 1) {
+                System.out.println("Median: " + ordPops[ordPops.length / 2]);
+            } else {
+                System.out.println("Median: " + (ordPops[ordPops.length / 2] + ordPops[ordPops.length / 2 + 1]) / 2.0);
             }
 
-            System.out.println(ordPops.length);
-            
-            for (int pop: ordPops) {
-                
-                System.out.println(pop);
+            //Min
+            System.out.println("Min: " + ordPops[0]);
+
+            //Max
+            System.out.println("Max: " + ordPops[ordPops.length - 1]);
+
+            //Standard Deviation
+            double stdSubtotal = 0;
+            for (int pop : ordPops) {
+                stdSubtotal += Math.pow(pop - mean,2);
             }
-            /*if (pops.size() % 2 == 1) {
-                System.out.println("Median: " + pops.get(pops.size() / 2));
-            } else {
-                System.out.println("Median: " + (pops.get(pops.size() / 2) + pops.get(pops.size() / 2 + 1)) / 2.0);
-            }*/
+            double std = Math.pow(stdSubtotal / ordPops.length, 0.5);
+            System.out.println("Standard Deviation: " + std);
 
 
         } catch (Exception e) {
