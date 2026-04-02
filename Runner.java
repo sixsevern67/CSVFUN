@@ -41,7 +41,7 @@ public class Runner {
                     if (pops.get(i) < least) {
                         least = pops.get(i);
                         index = i;
-                    }
+              }
                 }
                 ordPops[totalCountries - pops.size()] = least;
                 pops.remove(index);
@@ -73,3 +73,4 @@ public class Runner {
         }
     }
 }
+      
